@@ -34,7 +34,9 @@
 }
 
 .progress-bar {
-	-fx-accent: gray;
+	-fx-accent: green;
 	-fx-indeterminate-bar-length: 500;
 	-fx-indeterminate-bar-animation-time: 5.0;
+	-fx-indeterminate-bar-flip: false;
+	-fx-indeterminate-bar-escape: true;
 }
