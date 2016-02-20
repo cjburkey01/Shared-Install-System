@@ -59,6 +59,10 @@ public class Installer extends Application {
 								for(Action a : actions) {
 									Log.print(a.url + " - " + a.place + " - " + a.type);
 								}
+								ArrayList<com.cjburkey.shared.installer.system.xml.Runnable> runs = XmlFunc.getRuns();
+								for(com.cjburkey.shared.installer.system.xml.Runnable ru : runs) {
+									Log.print(ru.os + " - " + ru.file);
+								}
 								InstallerWindow.open(stage);
 							}
 						});
