@@ -45,6 +45,12 @@ public class Installer extends Application {
 					try {
 						BufferedReader r = new BufferedReader(new FileReader(info));
 						String url = r.readLine();
+						if(url == null) {
+							Log.print("Couldn't find.");
+							Stop.stop();
+							r.close();
+							return;
+						}
 						r.close();
 						Task<Void> t2 = Download.startDownload(new URL(url), xml);
 						t2.setOnSucceeded(new EventHandler<WorkerStateEvent>() {
